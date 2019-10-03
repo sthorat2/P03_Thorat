@@ -12,8 +12,10 @@ public class MainGameScreen implements Screen {
     Texture img;
     float x;
     float y;
-    public static final float SPEED = 100;
+    public static final float SPEED = 400;
     Ballon game;
+    public static final int star_width = 150;
+    public static final int star_height = 150;
 
     public MainGameScreen(Ballon game){
         this.game = game;
@@ -23,7 +25,7 @@ public class MainGameScreen implements Screen {
     @Override
     public void show(){
 
-        img = new Texture("badlogic.jpg");
+        img = new Texture("star.jpg");
 
     }
 
@@ -33,16 +35,19 @@ public class MainGameScreen implements Screen {
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-        if(Gdx.input.isKeyPressed(Input.Keys.UP))
-            y += SPEED * Gdx.graphics.getDeltaTime();
-        if(Gdx.input.isKeyPressed(Input.Keys.DOWN))
-            y -= SPEED * Gdx.graphics.getDeltaTime();
-        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT))
+
+        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
             x += SPEED * Gdx.graphics.getDeltaTime();
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT))
+            if(x + star_width > Gdx.graphics.getWidth())
+                x = Gdx.graphics.getWidth() - star_width;
+        }
+        if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
             x -= SPEED * Gdx.graphics.getDeltaTime();
+            if(x<0)
+               x = 0;
+        }
         game.batch.begin();
-        game.batch.draw(img, x, y);
+        game.batch.draw(img, x,y,star_width,star_height);
         game.batch.end();
 
 

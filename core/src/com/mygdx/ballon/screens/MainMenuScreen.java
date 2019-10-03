@@ -59,7 +59,7 @@ public class MainMenuScreen implements Screen {
 
         if()
             game.batch.draw(exitButtonActive, exit_x, exit_y, exit_width, exit_height);
-        else
+         else
             game.batch.draw(exitButtonInactive, exit_x, exit_y, exit_width, exit_height);
         */
         game.batch.end();

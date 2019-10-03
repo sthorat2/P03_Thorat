@@ -3,6 +3,7 @@ package com.mygdx.ballon;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.mygdx.ballon.screens.MainMenuScreen;
+import com.mygdx.ballon.screens.MainGameScreen;
 
 public class Ballon extends Game {
 	public SpriteBatch batch;
@@ -12,7 +13,7 @@ public class Ballon extends Game {
 	public void create () {
 
 		batch = new SpriteBatch();
-		this.setScreen(new MainMenuScreen(this));
+		this.setScreen(new MainGameScreen(this));
 
 	}
 
