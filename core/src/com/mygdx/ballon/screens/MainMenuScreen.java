@@ -1,11 +1,10 @@
 package com.mygdx.ballon.screens;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
-import com.mygdx.ballon.Ballon;
+import com.mygdx.ballon.BallonShooter;
 
 public class MainMenuScreen implements Screen {
 
@@ -18,13 +17,13 @@ public class MainMenuScreen implements Screen {
     private static final int play_x = 100;
     private static final int exit_x = 800;
 
-    Ballon game;
+    BallonShooter game;
     Texture playButtonActive;
     Texture playButtonInactive;
     Texture exitButtonActive;
     Texture exitButtonInactive;
 
-    public MainMenuScreen(Ballon game){
+    public MainMenuScreen(BallonShooter game){
         this.game = game;
         playButtonActive = new Texture("play_button_active.png");
         playButtonInactive = new Texture("play_button_active.png");
