@@ -1,4 +1,4 @@
-package com.mygdx.ballon;
+package com.mygdx.ballonshooter;
 
 import android.os.Bundle;
 
@@ -10,7 +10,8 @@ public class AndroidLauncher extends AndroidApplication {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		AndroidApplicationConfiguration config = new AndroidApplicationConfiguration();
-		initialize(new BallonShooter(), config);
 
+
+		initialize(new BallonBuster(), config);
 	}
 }
