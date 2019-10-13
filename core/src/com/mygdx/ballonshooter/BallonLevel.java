@@ -67,7 +67,7 @@ public class BallonLevel extends BaseScreen {
 
         clickedLabel = new Label("Clicked: 0", style);
         clickedLabel.setFontScale(2);
-        clickedLabel.setPosition(20,40);
+        clickedLabel.setPosition(420,440);
         uiStage.addActor(clickedLabel);
 
 

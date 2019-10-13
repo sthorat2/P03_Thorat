@@ -26,6 +26,7 @@ public class Win extends BaseScreen {
         BitmapFont font = new BitmapFont();
         Label.LabelStyle style = new Label.LabelStyle(font, Color.GOLD);
 
+
         text = new Label("touch to start again", style);
         text.setPosition(viewWidth / 2 - text.getWidth() /2, 100);
         text.setFontScale(2);

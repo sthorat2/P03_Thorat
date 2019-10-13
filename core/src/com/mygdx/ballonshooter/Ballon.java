@@ -29,11 +29,11 @@ public class Ballon extends BaseActor {
         initY = 15 * MathUtils.random(0.5f, 2.0f);
         time = 0;
         offsetX = -100;
-        //setTexture(new Texture(Gdx.files.internal("ballon.png")));
+        setTexture(new Texture(Gdx.files.internal("ballon.png")));
         //setTexture(new Texture(Gdx.files.internal("blueballon.png")));
         //setTexture(new Texture(Gdx.files.internal("greenballon.png")));
         //setTexture(new Texture(Gdx.files.internal("pinkballon.png")));
-        setTexture(new Texture(Gdx.files.internal("yelloballon.png")));
+        //setTexture(new Texture(Gdx.files.internal("yelloballon.png")));
        //setTexture(new Texture(Gdx.files.internal("purpleballon.png")));
         setColor(MathUtils.random(),MathUtils.random(),MathUtils.random(),1);
         setX(offsetX);
